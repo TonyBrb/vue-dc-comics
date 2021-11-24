@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="logo">
-      <img src="../assets/dc-logo.png" alt="logo DC">
+      <img src="../assets/img/dc-logo.png" alt="logo DC">
     </div>
     <div class="menu">
       <ul>
@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/mixins.scss";
   .container{
     display: flex;
     justify-content: space-between;
@@ -41,6 +42,7 @@ export default {
   }
 
   .menu{
+    @include center();
     ul{
       display: flex;
       list-style: none;
