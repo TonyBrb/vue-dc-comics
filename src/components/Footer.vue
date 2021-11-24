@@ -54,7 +54,25 @@
     </div>
     <div class="footer-container-down">
       <div class="container">
-        
+        <button class="btn">SIGN-UP NOW!</button>
+        <div class="right-container-down">
+          <h4>FOLLOW US</h4>
+          <div class="social">
+            <img src="../assets/img/footer-facebook.png" alt="">
+          </div>
+          <div class="social">
+            <img src="../assets/img/footer-twitter.png" alt="">
+          </div>
+          <div class="social">
+            <img src="../assets/img/footer-youtube.png" alt="">
+          </div>
+          <div class="social">
+            <img src="../assets/img/footer-pinterest.png" alt="">
+          </div>
+          <div class="social">
+            <img src="../assets/img/footer-periscope.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -114,5 +132,28 @@ export default {
     width: 100%;
     background-color: #303030;
     padding: 50px;
+
+    .btn{
+      padding: 10px;
+      background-color: #303030;
+      color: white;
+      font-weight: bold;
+      border: 2px solid #0282F9;
+    }
+
+    h4{
+      color: #0282F9;
+    }
+
+    .social{
+      width: 25px;
+    }
+
+    .right-container-down{
+      width: 285px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 </style>
