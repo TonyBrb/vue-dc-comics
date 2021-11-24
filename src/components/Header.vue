@@ -5,16 +5,9 @@
     </div>
     <div class="menu">
       <ul>
-        <li><a href="#">CHARACTERS</a></li>
-        <li><a href="#">COMICS</a></li>
-        <li><a href="#">MOVIES</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">COLLECTIBLES</a></li>
-        <li><a href="#">VIDEOS</a></li>
-        <li><a href="#">FANS</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">SHOP</a></li>
+        <li v-for="(link,index) in links" :key="index">
+          <a :class="{active: item.current}" :href="link.url">{{link.text}}</a>
+          </li>
       </ul>
     </div>
   </div>
@@ -22,7 +15,63 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data(){
+    return{
+      links:[
+        {
+          url:'#',
+          text: 'CHARACTERS',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'COMICS',
+          current: true
+        },
+        {
+          url:'#',
+          text: 'MOVIES',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'TV',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'GAMES',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'COLLECTIBLES',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'VIDEOS',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'FANS',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'NEWS',
+          current: false
+        },
+        {
+          url:'#',
+          text: 'SHOP',
+          current: false
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -47,12 +96,18 @@ export default {
       display: flex;
       list-style: none;
         li{
+          line-height: 51px;
           padding: 5px;
           font-size: 12px;
           color: black;
+            &:hover,
+            &.active{
+              border-bottom: solid 3px #0282F9;
+            }
           a{
             text-decoration: none;
             color: black;
+           
           }
         }
     }
