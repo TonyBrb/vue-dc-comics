@@ -3,6 +3,7 @@
     <Header />
     <Main />
     <SectionBF />
+    <Footer />
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 import SectionBF from "./components/SectionBF.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: 'App',
   components: {
     Header,
     Main,
-    SectionBF
+    SectionBF,
+    Footer
   }
 }
 </script>
