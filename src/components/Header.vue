@@ -5,9 +5,9 @@
     </div>
     <div class="menu">
       <ul>
-        <li v-for="(link,index) in links" :key="index">
-          <a :class="{active: item.current}" :href="link.url">{{link.text}}</a>
-          </li>
+        <li v-for="(link,index) in menu" :key="index">
+          <a :href="link.url">{{link.text}}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -16,62 +16,7 @@
 <script>
 export default {
   name: 'Header',
-  data(){
-    return{
-      links:[
-        {
-          url:'#',
-          text: 'CHARACTERS',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'COMICS',
-          current: true
-        },
-        {
-          url:'#',
-          text: 'MOVIES',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'TV',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'GAMES',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'COLLECTIBLES',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'VIDEOS',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'FANS',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'NEWS',
-          current: false
-        },
-        {
-          url:'#',
-          text: 'SHOP',
-          current: false
-        }
-      ]
-    }
-  }
+  props: ['menu']
 }
 </script>
 
@@ -100,14 +45,17 @@ export default {
           padding: 5px;
           font-size: 12px;
           color: black;
-            &:hover,
-            &.active{
+            &:hover{
               border-bottom: solid 3px #0282F9;
             }
+
           a{
+            
             text-decoration: none;
             color: black;
-           
+           &.active{
+             border-bottom: solid 3px #0282F9;
+           }
           }
         }
     }
