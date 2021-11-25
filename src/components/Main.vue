@@ -3,13 +3,21 @@
     <div class="jumbotron">
       <img src="../assets/img/jumbotron.jpg" alt="">
     </div>
-    <div class="container boxes">
 
+    <div class="current-series">
+        CURRENT SERIES
+      </div>
+
+    <div class="container boxes">
+      
       <Card v-for="(card,index) in Cards" 
       :key="index"
       :cardImage="card.thumb"
       :cardTitle="card.series"/>
-  
+
+      <button class="btn">
+        LOAD MORE
+      </button>
     </div>
   </div>
 </template>
@@ -106,6 +114,7 @@ export default {
 
 <style lang="scss" scoped>
   .main-container{
+    position: relative;
     background-color: #1C1C1C;
     color: white;
     padding-left: 0;
@@ -118,10 +127,31 @@ export default {
         object-position: 100% 0;
       }
     }
+
+    .current-series{
+      width: 187px;
+      background-color: #0282F9;
+      color: white;
+      font-weight: bold;
+      padding: 10px 30px 10px 30px;
+      position: absolute;
+      top: 253px;
+      left: 202px;
+    }
   }
   .boxes{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
+
+    .btn{
+      background-color: #0282F9;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 10px 30px 10px 30px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
 </style>
